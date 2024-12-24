@@ -78,7 +78,7 @@ if not os.path.exists(test_root):
 
 ############################################################################################
 ## warm up1
-[]############################################################################################
+############################################################################################
 for i, (img, path) in enumerate(dataloader):
     img = img.to(device)
     model(img)
@@ -97,7 +97,7 @@ def test_and_save(model):
         
         for i, (img, path) in enumerate(dataloader):
             fullname = path[0]
-            fname = fullname.split('\\')[-1]
+            fname = fullname.split('/')[-1]
 
             # save_image(img[0], 'img1.png')
 
@@ -121,6 +121,7 @@ def test_and_save(model):
                 os.makedirs(f'{test_root}/{p}')
             
             # if index == 1:
+
             shutil.copyfile(fullname, f'{test_root}/{p}/{fname}')
 
     etime = time.time()

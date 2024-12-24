@@ -1,19 +1,18 @@
 import os
 
-name = 'noul_cont_test-20230202'
+name = 'test'
 
 nc = 2
 
-img_size = 528
+img_size = 224
 
-data_path = r'D:\data\noul\inplace\2023\30d\ng\Image\\cropped'
-# data_path = r'D:\data\noul\inplace\2023\30d_test\Image\\cropped'
+data_path = r'./dataset/sample/val/'
 
-weight_path = r'F:\projects\NOUL\models\20230202\noul_cont.pt'
+weight_path = r'./exp/train/test/best.pt'
 
 class_list = r'0.ok 1.ng'
 
-model = 6
+model = 0
 
 subdir = True
 
